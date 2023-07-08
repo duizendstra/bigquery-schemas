@@ -1,133 +1,158 @@
 [
     {
+        "name": "id",
+        "type": "STRING",
         "mode": "NULLABLE",
-        "name": "Agreedtoterms",
-        "type": "BOOLEAN"
+        "description": "The unique ID for the user."
     },
     {
+        "name": "primaryEmail",
+        "type": "STRING",
         "mode": "NULLABLE",
-        "name": "Creationtime",
-        "type": "TIMESTAMP"
+        "description": "The primary email address of the user."
     },
     {
+        "name": "customerId",
+        "type": "STRING",
         "mode": "NULLABLE",
-        "name": "Customerid",
-        "type": "STRING"
+        "description": "The unique ID for the customer's Google Workspace account."
     },
     {
-        "fields": [
-            {
-                "mode": "NULLABLE",
-                "name": "Address",
-                "type": "STRING"
-            },
-            {
-                "mode": "NULLABLE",
-                "name": "Type",
-                "type": "STRING"
-            },
-            {
-                "mode": "NULLABLE",
-                "name": "Primary",
-                "type": "BOOLEAN"
-            }
-        ],
-        "mode": "REPEATED",
-        "name": "Emails",
-        "type": "RECORD"
+        "name": "creationTime",
+        "type": "TIMESTAMP",
+        "mode": "NULLABLE",
+        "description": "The time the user's account was created."
     },
     {
+        "name": "lastLoginTime",
+        "type": "TIMESTAMP",
         "mode": "NULLABLE",
-        "name": "Etag",
-        "type": "STRING"
+        "description": "The last time the user logged in to the user's account."
     },
     {
+        "name": "deletionTime",
+        "type": "TIMESTAMP",
         "mode": "NULLABLE",
-        "name": "ID",
-        "type": "STRING"
+        "description": "The time the user's account was deleted."
     },
     {
+        "name": "agreedToTerms",
+        "type": "BOOLEAN",
         "mode": "NULLABLE",
-        "name": "Includeinglobaladdresslist",
-        "type": "BOOLEAN"
+        "description": "Indicates if the user has agreed to the terms of service."
     },
     {
+        "name": "suspended",
+        "type": "BOOLEAN",
         "mode": "NULLABLE",
-        "name": "Kind",
-        "type": "STRING"
+        "description": "Indicates if the user's Google Workspace account is currently suspended."
     },
     {
+        "name": "isAdmin",
+        "type": "BOOLEAN",
         "mode": "NULLABLE",
-        "name": "Lastlogintime",
-        "type": "TIMESTAMP"
+        "description": "Indicates if the user is an administrator for the Google Workspace domain."
     },
     {
+        "name": "isDelegatedAdmin",
+        "type": "BOOLEAN",
         "mode": "NULLABLE",
-        "name": "DeletionTime",
-        "type": "TIMESTAMP"
+        "description": "Indicates if the user is a delegated administrator."
     },
     {
-        "fields": [
-            {
-                "mode": "NULLABLE",
-                "name": "Familyname",
-                "type": "STRING"
-            },
-            {
-                "mode": "NULLABLE",
-                "name": "Fullname",
-                "type": "STRING"
-            },
-            {
-                "mode": "NULLABLE",
-                "name": "Givenname",
-                "type": "STRING"
-            }
-        ],
+        "name": "thumbnailPhotoUrl",
+        "type": "STRING",
         "mode": "NULLABLE",
+        "description": "URL of the user's thumbnail photo."
+    },
+    {
+        "name": "thumbnailPhotoEtag",
+        "type": "STRING",
+        "mode": "NULLABLE",
+        "description": "ETag of the user's thumbnail photo."
+    },
+    {
+        "name": "orgUnitPath",
+        "type": "STRING",
+        "mode": "NULLABLE",
+        "description": "The full path of the parent organization associated with the user."
+    },
+    {
+        "name": "includeInGlobalAddressList",
+        "type": "BOOLEAN",
+        "mode": "NULLABLE",
+        "description": "Indicates if the user's profile is visible in the Google Workspace global address list when the contact sharing feature is enabled for the domain."
+    },
+    {
         "name": "Name",
-        "type": "RECORD"
-    },
-    {
+        "type": "RECORD",
         "mode": "NULLABLE",
-        "name": "Orgunitpath",
-        "type": "STRING"
-    },
-    {
+        "description": "The user's name details.",
         "fields": [
             {
+                "name": "familyName",
+                "type": "STRING",
                 "mode": "NULLABLE",
-                "name": "Type",
-                "type": "STRING"
+                "description": "The user's last name."
             },
             {
+                "name": "fullName",
+                "type": "STRING",
                 "mode": "NULLABLE",
-                "name": "Value",
-                "type": "STRING"
+                "description": "The user's full name."
+            },
+            {
+                "name": "givenName",
+                "type": "STRING",
+                "mode": "NULLABLE",
+                "description": "The user's first name."
             }
-        ],
+        ]
+    },
+    {
+        "name": "Emails",
+        "type": "RECORD",
         "mode": "REPEATED",
+        "description": "A list of the user's email addresses.",
+        "fields": [
+            {
+                "name": "address",
+                "type": "STRING",
+                "mode": "NULLABLE",
+                "description": "The user's email address."
+            },
+            {
+                "name": "type",
+                "type": "STRING",
+                "mode": "NULLABLE",
+                "description": "The type of the email account."
+            },
+            {
+                "name": "primary",
+                "type": "BOOLEAN",
+                "mode": "NULLABLE",
+                "description": "Indicates if this is the user's primary email. Only one can be primary."
+            }
+        ]
+    },
+    {
         "name": "Phones",
-        "type": "RECORD"
-    },
-    {
-        "mode": "NULLABLE",
-        "name": "Primaryemail",
-        "type": "STRING"
-    },
-    {
-        "mode": "NULLABLE",
-        "name": "Thumbnailphotoetag",
-        "type": "STRING"
-    },
-    {
-        "mode": "NULLABLE",
-        "name": "Thumbnailphotourl",
-        "type": "STRING"
-    },
-    {
-        "mode": "NULLABLE",
-        "name": "Suspended",
-        "type": "BOOLEAN"
+        "type": "RECORD",
+        "mode": "REPEATED",
+        "description": "A list of the user's phone numbers.",
+        "fields": [
+            {
+                "name": "type",
+                "type": "STRING",
+                "mode": "NULLABLE",
+                "description": "The type of the phone number."
+            },
+            {
+                "name": "value",
+                "type": "STRING",
+                "mode": "NULLABLE",
+                "description": "The user's phone number."
+            }
+        ]
     }
 ]
