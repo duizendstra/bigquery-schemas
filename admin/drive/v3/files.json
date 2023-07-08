@@ -1,0 +1,335 @@
+[
+    {
+        "name": "id",
+        "type": "STRING",
+        "mode": "NULLABLE"
+    },
+    {
+        "name": "driveId",
+        "type": "STRING",
+        "mode": "NULLABLE"
+    },
+    {
+        "name": "modifiedTime",
+        "type": "TIMESTAMP",
+        "mode": "NULLABLE"
+    },
+    {
+        "name": "capabilities",
+        "type": "RECORD",
+        "mode": "NULLABLE",
+        "fields": [
+            {
+                "name": "canReadDrive",
+                "type": "BOOLEAN",
+                "mode": "NULLABLE"
+            },
+            {
+                "name": "canMoveChildrenOutOfDrive",
+                "type": "BOOLEAN",
+                "mode": "NULLABLE",
+            },
+            {
+                "name": "canDelete",
+                "type": "BOOLEAN",
+                "mode": "NULLABLE"
+            },
+            {
+                "name": "canRename",
+                "type": "BOOLEAN",
+                "mode": "NULLABLE"
+            },
+            {
+                "name": "canTrash",
+                "type": "BOOLEAN",
+                "mode": "NULLABLE"
+            },
+            {
+                "name": "canRemoveMyDriveParent",
+                "type": "BOOLEAN",
+                "mode": "NULLABLE",
+            },
+            {
+                "name": "canDownload",
+                "type": "BOOLEAN",
+                "mode": "NULLABLE"
+            },
+            {
+                "name": "canAddFolderFromAnotherDrive",
+                "type": "BOOLEAN",
+                "mode": "NULLABLE",
+            },
+            {
+                "name": "canUntrash",
+                "type": "BOOLEAN",
+                "mode": "NULLABLE"
+            },
+            {
+                "name": "canComment",
+                "type": "BOOLEAN",
+                "mode": "NULLABLE"
+            },
+            {
+                "name": "canRemoveChildren",
+                "type": "BOOLEAN",
+                "mode": "NULLABLE"
+            },
+            {
+                "name": "canEdit",
+                "type": "BOOLEAN",
+                "mode": "NULLABLE"
+            },
+            {
+                "name": "canReadRevisions",
+                "type": "BOOLEAN",
+                "mode": "NULLABLE"
+            },
+            {
+                "name": "canMoveItemWithinDrive",
+                "type": "BOOLEAN",
+                "mode": "NULLABLE",
+            },
+            {
+                "name": "canMoveItemOutOfDrive",
+                "type": "BOOLEAN",
+                "mode": "NULLABLE",
+            },
+            {
+                "name": "canListChildren",
+                "type": "BOOLEAN",
+                "mode": "NULLABLE"
+            },
+            {
+                "name": "canShare",
+                "type": "BOOLEAN",
+                "mode": "NULLABLE"
+            },
+            {
+                "name": "canChangeCopyRequiresWriterPermission",
+                "type": "BOOLEAN",
+                "mode": "NULLABLE",
+            },
+            {
+                "name": "canAddMyDriveParent",
+                "type": "BOOLEAN",
+                "mode": "NULLABLE"
+            },
+            {
+                "name": "canModifyContent",
+                "type": "BOOLEAN",
+                "mode": "NULLABLE"
+            },
+            {
+                "name": "canDeleteChildren",
+                "type": "BOOLEAN",
+                "mode": "NULLABLE"
+            },
+            {
+                "name": "canTrashChildren",
+                "type": "BOOLEAN",
+                "mode": "NULLABLE"
+            },
+            {
+                "name": "canCopy",
+                "type": "BOOLEAN",
+                "mode": "NULLABLE"
+            },
+            {
+                "name": "canMoveChildrenWithinDrive",
+                "type": "BOOLEAN",
+                "mode": "NULLABLE",
+            },
+            {
+                "name": "canAddChildren",
+                "type": "BOOLEAN",
+                "mode": "NULLABLE"
+            },
+        ],
+    },
+    {
+        "name": "modifiedByMeTime",
+        "type": "TIMESTAMP",
+        "mode": "NULLABLE"
+    },
+    {
+        "name": "ownedByMe",
+        "type": "BOOLEAN",
+        "mode": "NULLABLE"
+    },
+    {
+        "name": "viewedByMeTime",
+        "type": "TIMESTAMP",
+        "mode": "NULLABLE"
+    },
+    {
+        "name": "lastModifyingUser",
+        "type": "RECORD",
+        "mode": "NULLABLE",
+        "fields": [
+            {
+                "name": "emailAddress",
+                "type": "STRING",
+                "mode": "NULLABLE"
+            },
+            {
+                "name": "permissionId",
+                "type": "STRING",
+                "mode": "NULLABLE"
+            },
+        ],
+    },
+    {
+        "name": "modifiedByMe",
+        "type": "BOOLEAN",
+        "mode": "NULLABLE"
+    },
+    {
+        "name": "size",
+        "type": "INTEGER",
+        "mode": "NULLABLE"
+    },
+    {
+        "name": "copyRequiresWriterPermission",
+        "type": "BOOLEAN",
+        "mode": "NULLABLE"
+    },
+    {
+        "name": "trashed",
+        "type": "BOOLEAN",
+        "mode": "NULLABLE"
+    },
+    {
+        "name": "trashedTime",
+        "type": "TIMESTAMP",
+        "mode": "NULLABLE"
+    },
+    {
+        "name": "createdTime",
+        "type": "TIMESTAMP",
+        "mode": "NULLABLE"
+    },
+    {
+        "name": "writersCanShare",
+        "type": "BOOLEAN",
+        "mode": "NULLABLE"
+    },
+    {
+        "name": "viewedByMe",
+        "type": "BOOLEAN",
+        "mode": "NULLABLE"
+    },
+    {
+        "name": "shared",
+        "type": "BOOLEAN",
+        "mode": "NULLABLE"
+    },
+    {
+        "name": "fullFileExtension",
+        "type": "STRING",
+        "mode": "NULLABLE"
+    },
+    {
+        "name": "sharedWithMeTime",
+        "type": "TIMESTAMP",
+        "mode": "NULLABLE"
+    },
+    {
+        "name": "version",
+        "type": "INTEGER",
+        "mode": "NULLABLE"
+    },
+    {
+        "name": "mimeType",
+        "type": "STRING",
+        "mode": "NULLABLE"
+    },
+    {
+        "name": "parents",
+        "type": "STRING",
+        "mode": "REPEATED"
+    },
+    {
+        "name": "explicitlyTrashed",
+        "type": "BOOLEAN",
+        "mode": "NULLABLE"
+    },
+    {
+        "name": "permissionIds",
+        "type": "STRING",
+        "mode": "REPEATED"
+    },
+    {
+        "name": "owners",
+        "type": "RECORD",
+        "mode": "REPEATED",
+        "fields": [
+            {
+                "name": "permissionId",
+                "type": "string",
+                "mode": "NULLABLE"
+            },
+            {
+                "name": "me",
+                "type": "boolean",
+                "mode": "NULLABLE"
+            },
+            {
+                "name": "emailAddress",
+                "type": "string",
+                "mode": "NULLABLE"
+            },
+        ],
+    },
+    {
+        "name": "permissions",
+        "type": "RECORD",
+        "mode": "REPEATED",
+        "fields": [
+            {
+                "name": "deleted",
+                "type": "BOOLEAN",
+                "mode": "NULLABLE"
+            },
+            {
+                "name": "displayName",
+                "type": "STRING",
+                "mode": "NULLABLE"
+            },
+            {
+                "name": "role",
+                "type": "STRING",
+                "mode": "NULLABLE"
+            },
+            {
+                "name": "emailAddress",
+                "type": "STRING",
+                "mode": "NULLABLE"
+            },
+            {
+                "name": "domain",
+                "type": "STRING",
+                "mode": "NULLABLE"
+            },
+            {
+                "name": "type",
+                "type": "STRING",
+                "mode": "NULLABLE"
+            },
+            {
+                "name": "allowFileDiscovery",
+                "type": "BOOLEAN",
+                "mode": "NULLABLE"
+            },
+            {
+                "name": "id",
+                "type": "STRING",
+                "mode": "NULLABLE"
+            },
+            {
+                "name": "expirationTime",
+                "type": "TIMESTAMP",
+                "mode": "NULLABLE"
+            },
+        ],
+    },
+]

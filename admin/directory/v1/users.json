@@ -1,0 +1,133 @@
+[
+    {
+        "mode": "NULLABLE",
+        "name": "Agreedtoterms",
+        "type": "BOOLEAN"
+    },
+    {
+        "mode": "NULLABLE",
+        "name": "Creationtime",
+        "type": "TIMESTAMP"
+    },
+    {
+        "mode": "NULLABLE",
+        "name": "Customerid",
+        "type": "STRING"
+    },
+    {
+        "fields": [
+            {
+                "mode": "NULLABLE",
+                "name": "Address",
+                "type": "STRING"
+            },
+            {
+                "mode": "NULLABLE",
+                "name": "Type",
+                "type": "STRING"
+            },
+            {
+                "mode": "NULLABLE",
+                "name": "Primary",
+                "type": "BOOLEAN"
+            }
+        ],
+        "mode": "REPEATED",
+        "name": "Emails",
+        "type": "RECORD"
+    },
+    {
+        "mode": "NULLABLE",
+        "name": "Etag",
+        "type": "STRING"
+    },
+    {
+        "mode": "NULLABLE",
+        "name": "ID",
+        "type": "STRING"
+    },
+    {
+        "mode": "NULLABLE",
+        "name": "Includeinglobaladdresslist",
+        "type": "BOOLEAN"
+    },
+    {
+        "mode": "NULLABLE",
+        "name": "Kind",
+        "type": "STRING"
+    },
+    {
+        "mode": "NULLABLE",
+        "name": "Lastlogintime",
+        "type": "TIMESTAMP"
+    },
+    {
+        "mode": "NULLABLE",
+        "name": "DeletionTime",
+        "type": "TIMESTAMP"
+    },
+    {
+        "fields": [
+            {
+                "mode": "NULLABLE",
+                "name": "Familyname",
+                "type": "STRING"
+            },
+            {
+                "mode": "NULLABLE",
+                "name": "Fullname",
+                "type": "STRING"
+            },
+            {
+                "mode": "NULLABLE",
+                "name": "Givenname",
+                "type": "STRING"
+            }
+        ],
+        "mode": "NULLABLE",
+        "name": "Name",
+        "type": "RECORD"
+    },
+    {
+        "mode": "NULLABLE",
+        "name": "Orgunitpath",
+        "type": "STRING"
+    },
+    {
+        "fields": [
+            {
+                "mode": "NULLABLE",
+                "name": "Type",
+                "type": "STRING"
+            },
+            {
+                "mode": "NULLABLE",
+                "name": "Value",
+                "type": "STRING"
+            }
+        ],
+        "mode": "REPEATED",
+        "name": "Phones",
+        "type": "RECORD"
+    },
+    {
+        "mode": "NULLABLE",
+        "name": "Primaryemail",
+        "type": "STRING"
+    },
+    {
+        "mode": "NULLABLE",
+        "name": "Thumbnailphotoetag",
+        "type": "STRING"
+    },
+    {
+        "mode": "NULLABLE",
+        "name": "Thumbnailphotourl",
+        "type": "STRING"
+    },
+    {
+        "mode": "NULLABLE",
+        "name": "Suspended",
+        "type": "BOOLEAN"
+    }
+]
