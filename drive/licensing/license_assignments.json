@@ -13,15 +13,21 @@
   },
   {
     "mode": "NULLABLE",
+    "name": "productId",
+    "type": "STRING",
+    "description": "Name of the product."
+  },
+  {
+    "mode": "NULLABLE",
     "name": "userId",
     "type": "STRING",
     "description": "The user's ID."
   },
   {
     "mode": "NULLABLE",
-    "name": "productId",
+    "name": "selfLink",
     "type": "STRING",
-    "description": "Name of the product."
+    "description": "Link to this page."
   },
   {
     "mode": "NULLABLE",
