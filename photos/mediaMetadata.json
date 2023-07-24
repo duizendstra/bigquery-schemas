@@ -1,0 +1,103 @@
+[
+    {
+        "name": "id",
+        "type": "STRING",
+        "mode": "REQUIRED"
+    },
+    {
+        "name": "productUrl",
+        "type": "STRING",
+        "mode": "NULLABLE"
+    },
+    {
+        "name": "baseUrl",
+        "type": "STRING",
+        "mode": "NULLABLE"
+    },
+    {
+        "name": "mimeType",
+        "type": "STRING",
+        "mode": "NULLABLE"
+    },
+    {
+        "name": "mediaMetadata",
+        "type": "RECORD",
+        "mode": "NULLABLE",
+        "fields": [
+            {
+                "name": "creationTime",
+                "type": "TIMESTAMP",
+                "mode": "NULLABLE"
+            },
+            {
+                "name": "width",
+                "type": "INTEGER",
+                "mode": "NULLABLE"
+            },
+            {
+                "name": "height",
+                "type": "INTEGER",
+                "mode": "NULLABLE"
+            },
+            {
+                "name": "photo",
+                "type": "RECORD",
+                "mode": "NULLABLE",
+                "fields": [
+                    {
+                        "name": "cameraMake",
+                        "type": "STRING",
+                        "mode": "NULLABLE"
+                    },
+                    {
+                        "name": "cameraModel",
+                        "type": "STRING",
+                        "mode": "NULLABLE"
+                    },
+                    {
+                        "name": "focalLength",
+                        "type": "FLOAT",
+                        "mode": "NULLABLE"
+                    },
+                    {
+                        "name": "apertureFNumber",
+                        "type": "FLOAT",
+                        "mode": "NULLABLE"
+                    },
+                    {
+                        "name": "isoEquivalent",
+                        "type": "INTEGER",
+                        "mode": "NULLABLE"
+                    }
+                ]
+            },
+            {
+                "name": "video",
+                "type": "RECORD",
+                "mode": "NULLABLE",
+                "fields": [
+                    {
+                        "name": "status",
+                        "type": "STRING",
+                        "mode": "NULLABLE"
+                    },
+                    {
+                        "name": "cameraMake",
+                        "type": "STRING",
+                        "mode": "NULLABLE"
+                    },
+                    {
+                        "name": "cameraModel",
+                        "type": "STRING",
+                        "mode": "NULLABLE"
+                    },
+                    {
+                        "name": "fps",
+                        "type": "FLOAT",
+                        "mode": "NULLABLE"
+                    }
+                ]
+            }
+        ]
+    }
+]
