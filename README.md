@@ -30,29 +30,32 @@ Here's a Python snippet using the `google-cloud-bigquery` client library:
 ```python
 from google.cloud import bigquery
 import json
+import requests
 
 # Initialize a BigQuery client
-client = bigquery.Client()
+client = bigquery.Client(project="[your_project_id")
 
 # Define your dataset
-dataset_ref = client.dataset('your_dataset_id')
+dataset_ref = client.dataset('your_table_id')
 
-# Define the path to the schema file
-schema_file_path = '/path/to/schema/file.json'
+# Define the URL to the schema file on GitHub
+schema_file_url = 'schema_file_url'
 
-# Load the schema from the JSON file
-with open(schema_file_path) as schema_file:
-    schema_json = json.load(schema_file)
-    schema = [bigquery.SchemaField.from_api_repr(field) for field in schema_json]
+# Fetch the raw content of the schema file
+response = requests.get(schema_file_url)
+schema_json = response.json()
+
+# Convert the JSON schema to BigQuery SchemaField objects
+schema = [bigquery.SchemaField.from_api_repr(field) for field in schema_json]
 
 # Create a new table
 table_ref = dataset_ref.table('your_table_id')
 table = bigquery.Table(table_ref, schema=schema)
 table = client.create_table(table)
 
-print(f"Created table {table.project}.{table.dataset_id}.{table.table_id}")
+print(f"Created table {table.project}.{table.dataset_id}.{table.table_id}")```
 
-Replace 'your_dataset_id', '/path/to/schema/file.json', and 'your_table_id' with your dataset ID, the path to the schema file, and your table ID, respectively.
+Replace 'your_project_id', 'your_dataset_id', 'schema_file_url', and 'your_table_id' with your dataset ID, the url to the schema file, and your table ID, respectively.
 
 ## Contributing
 Contributions are welcome! Please feel free to submit a pull request with any corrections to existing schemas or addition of new ones.
