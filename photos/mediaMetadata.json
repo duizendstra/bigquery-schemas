@@ -20,6 +20,16 @@
         "mode": "NULLABLE"
     },
     {
+        "name": "description",
+        "type": "STRING",
+        "mode": "NULLABLE"
+    },
+    {
+        "name": "filename",
+        "type": "STRING",
+        "mode": "NULLABLE"
+    },
+    {
         "name": "mediaMetadata",
         "type": "RECORD",
         "mode": "NULLABLE",
@@ -67,6 +77,11 @@
                     {
                         "name": "isoEquivalent",
                         "type": "INTEGER",
+                        "mode": "NULLABLE"
+                    },
+                    {
+                        "name": "exposureTime",
+                        "type": "STRING",
                         "mode": "NULLABLE"
                     }
                 ]
