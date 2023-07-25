@@ -32,28 +32,32 @@ from google.cloud import bigquery
 import json
 import requests
 
+PROJECT_ID = "your_project_id"
+DATASET_ID = "your_dataset_id"
+TABLE_ID = "your_table_id"
+SCHEMA_URL = "https://raw.githubusercontent.com/duizendstra/bigquery-schemas/main/photos/album.json"
+
 # Initialize a BigQuery client
-client = bigquery.Client(project="[your_project_id")
+client = bigquery.Client(project=PROJECT_ID)
 
 # Define your dataset
-dataset_ref = client.dataset('your_table_id')
+dataset_ref = client.dataset(DATASET_ID)
 
-# Define the URL to the schema file on GitHub
-schema_file_url = 'schema_file_url'
 
 # Fetch the raw content of the schema file
-response = requests.get(schema_file_url)
+response = requests.get(SCHEMA_URL)
 schema_json = response.json()
 
 # Convert the JSON schema to BigQuery SchemaField objects
 schema = [bigquery.SchemaField.from_api_repr(field) for field in schema_json]
 
 # Create a new table
-table_ref = dataset_ref.table('your_table_id')
+table_ref = dataset_ref.table(TABLE_ID)
 table = bigquery.Table(table_ref, schema=schema)
 table = client.create_table(table)
 
-print(f"Created table {table.project}.{table.dataset_id}.{table.table_id}")```
+print(f"Created table {table.project}.{table.dataset_id}.{table.table_id}")
+```
 
 Replace 'your_project_id', 'your_dataset_id', 'schema_file_url', and 'your_table_id' with your dataset ID, the url to the schema file, and your table ID, respectively.
 
