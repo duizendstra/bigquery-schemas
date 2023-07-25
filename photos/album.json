@@ -1,0 +1,71 @@
+[
+  {
+    "name": "id",
+    "type": "STRING",
+    "mode": "NULLABLE"
+  },
+  {
+    "name": "title",
+    "type": "STRING",
+    "mode": "NULLABLE"
+  },
+  {
+    "name": "productUrl",
+    "type": "STRING",
+    "mode": "NULLABLE"
+  },
+  {
+    "name": "mediaItemsCount",
+    "type": "STRING",
+    "mode": "NULLABLE"
+  },
+  {
+    "name": "coverPhotoBaseUrl",
+    "type": "STRING",
+    "mode": "NULLABLE"
+  },
+  {
+    "name": "coverPhotoMediaItemId",
+    "type": "STRING",
+    "mode": "NULLABLE"
+  },
+  {
+    "name": "isWriteable",
+    "type": "BOOLEAN",
+    "mode": "NULLABLE"
+  },
+  {
+    "name": "shareInfo",
+    "type": "RECORD",
+    "mode": "NULLABLE",
+    "fields": [
+      {
+        "name": "sharedAlbumOptions",
+        "type": "RECORD",
+        "mode": "NULLABLE",
+        "fields": [
+          {
+            "name": "isCollaborative",
+            "type": "BOOLEAN",
+            "mode": "NULLABLE"
+          },
+          {
+            "name": "isCommentable",
+            "type": "BOOLEAN",
+            "mode": "NULLABLE"
+          }
+        ]
+      },
+      {
+        "name": "shareToken",
+        "type": "STRING",
+        "mode": "NULLABLE"
+      },
+      {
+        "name": "shareableUrl",
+        "type": "STRING",
+        "mode": "NULLABLE"
+      }
+    ]
+  }
+]
