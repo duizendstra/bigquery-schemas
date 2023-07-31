@@ -1,0 +1,140 @@
+[
+  {
+    "name": "kind",
+    "type": "STRING",
+    "mode": "NULLABLE"
+  },
+  {
+    "name": "etag",
+    "type": "STRING",
+    "mode": "NULLABLE"
+  },
+  {
+    "name": "id",
+    "type": "STRING",
+    "mode": "NULLABLE"
+  },
+  {
+    "name": "status",
+    "type": "STRING",
+    "mode": "NULLABLE"
+  },
+  {
+    "name": "htmlLink",
+    "type": "STRING",
+    "mode": "NULLABLE"
+  },
+  {
+    "name": "created",
+    "type": "TIMESTAMP",
+    "mode": "NULLABLE"
+  },
+  {
+    "name": "updated",
+    "type": "TIMESTAMP",
+    "mode": "NULLABLE"
+  },
+  {
+    "name": "summary",
+    "type": "STRING",
+    "mode": "NULLABLE"
+  },
+  {
+    "name": "description",
+    "type": "STRING",
+    "mode": "NULLABLE"
+  },
+  {
+    "name": "location",
+    "type": "STRING",
+    "mode": "NULLABLE"
+  },
+  {
+    "name": "creator",
+    "type": "RECORD",
+    "mode": "NULLABLE",
+    "fields": [
+      {
+        "name": "id",
+        "type": "STRING",
+        "mode": "NULLABLE"
+      },
+      {
+        "name": "email",
+        "type": "STRING",
+        "mode": "NULLABLE"
+      },
+      {
+        "name": "displayName",
+        "type": "STRING",
+        "mode": "NULLABLE"
+      },
+      {
+        "name": "self",
+        "type": "BOOLEAN",
+        "mode": "NULLABLE"
+      }
+    ]
+  },
+  {
+    "name": "start",
+    "type": "RECORD",
+    "mode": "NULLABLE",
+    "fields": [
+      {
+        "name": "dateTime",
+        "type": "TIMESTAMP",
+        "mode": "NULLABLE"
+      },
+      {
+        "name": "date",
+        "type": "DATE",
+        "mode": "NULLABLE"
+      },
+      {
+        "name": "timeZone",
+        "type": "STRING",
+        "mode": "NULLABLE"
+      }
+    ]
+  },
+  {
+    "name": "end",
+    "type": "RECORD",
+    "mode": "NULLABLE",
+    "fields": [
+      {
+        "name": "dateTime",
+        "type": "TIMESTAMP",
+        "mode": "NULLABLE"
+      },
+      {
+        "name": "date",
+        "type": "DATE",
+        "mode": "NULLABLE"
+      },
+      {
+        "name": "timeZone",
+        "type": "STRING",
+        "mode": "NULLABLE"
+      }
+    ]
+  },
+  {
+  "name": "extendedProperties",
+  "type": "RECORD",
+  "mode": "NULLABLE",
+  "fields": [
+    {
+      "name": "private",
+      "type": "STRING",
+      "mode": "REPEATED"
+    },
+    {
+      "name": "shared",
+      "type": "STRING",
+      "mode": "REPEATED"
+    }
+  ]
+}
+]
