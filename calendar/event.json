@@ -121,20 +121,37 @@
     ]
   },
   {
-  "name": "extendedProperties",
-  "type": "RECORD",
-  "mode": "NULLABLE",
-  "fields": [
-    {
-      "name": "private",
-      "type": "STRING",
-      "mode": "REPEATED"
-    },
-    {
-      "name": "shared",
-      "type": "STRING",
-      "mode": "REPEATED"
-    }
-  ]
-}
+    "name": "extendedProperties",
+    "type": "RECORD",
+    "mode": "NULLABLE",
+    "fields": [
+      {
+        "name": "private",
+        "type": "RECORD",
+        "mode": "NULLABLE",
+        "fields": [
+          {
+            "name": "Project",
+            "type": "STRING",
+            "mode": "NULLABLE"
+          },
+          {
+            "name": "Task",
+            "type": "STRING",
+            "mode": "NULLABLE"
+          },
+          {
+            "name": "Client",
+            "type": "STRING",
+            "mode": "NULLABLE"
+          }
+        ]
+      },
+      {
+        "name": "shared",
+        "type": "STRING",
+        "mode": "REPEATED"
+      }
+    ]
+  }
 ]
