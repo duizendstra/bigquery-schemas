@@ -50,7 +50,39 @@
     "mode": "NULLABLE"
   },
   {
+    "name": "colorId",
+    "type": "STRING",
+    "mode": "NULLABLE"
+  },
+  {
     "name": "creator",
+    "type": "RECORD",
+    "mode": "NULLABLE",
+    "fields": [
+      {
+        "name": "id",
+        "type": "STRING",
+        "mode": "NULLABLE"
+      },
+      {
+        "name": "email",
+        "type": "STRING",
+        "mode": "NULLABLE"
+      },
+      {
+        "name": "displayName",
+        "type": "STRING",
+        "mode": "NULLABLE"
+      },
+      {
+        "name": "self",
+        "type": "BOOLEAN",
+        "mode": "NULLABLE"
+      }
+    ]
+  },
+  {
+    "name": "organizer",
     "type": "RECORD",
     "mode": "NULLABLE",
     "fields": [
@@ -121,6 +153,110 @@
     ]
   },
   {
+    "name": "endTimeUnspecified",
+    "type": "BOOLEAN",
+    "mode": "NULLABLE"
+  },
+  {
+    "name": "recurrence",
+    "type": "STRING",
+    "mode": "REPEATED"
+  },
+  {
+    "name": "recurringEventId",
+    "type": "STRING",
+    "mode": "NULLABLE"
+  },
+  {
+    "name": "originalStartTime",
+    "type": "RECORD",
+    "mode": "NULLABLE",
+    "fields": [
+      {
+        "name": "dateTime",
+        "type": "TIMESTAMP",
+        "mode": "NULLABLE"
+      },
+      {
+        "name": "date",
+        "type": "DATE",
+        "mode": "NULLABLE"
+      },
+      {
+        "name": "timeZone",
+        "type": "STRING",
+        "mode": "NULLABLE"
+      }
+    ]
+  },
+  {
+    "name": "transparency",
+    "type": "STRING",
+    "mode": "NULLABLE"
+  },
+  {
+    "name": "visibility",
+    "type": "STRING",
+    "mode": "NULLABLE"
+  },
+  {
+    "name": "iCalUID",
+    "type": "STRING",
+    "mode": "NULLABLE"
+  },
+  {
+    "name": "sequence",
+    "type": "INTEGER",
+    "mode": "NULLABLE"
+  },
+  {
+    "name": "attendees",
+    "type": "RECORD",
+    "mode": "REPEATED",
+    "fields": [
+      {
+        "name": "id",
+        "type": "STRING",
+        "mode": "NULLABLE"
+      },
+      {
+        "name": "email",
+        "type": "STRING",
+        "mode": "NULLABLE"
+      },
+      {
+        "name": "displayName",
+        "type": "STRING",
+        "mode": "NULLABLE"
+      },
+      {
+        "name": "self",
+        "type": "BOOLEAN",
+        "mode": "NULLABLE"
+      },
+      {
+        "name": "organizer",
+        "type": "BOOLEAN",
+        "mode": "NULLABLE"
+      },
+      {
+        "name": "responseStatus",
+        "type": "STRING",
+        "mode": "NULLABLE"
+      },
+      {
+        "name": "comment",
+        "type": "STRING",
+        "mode": "NULLABLE"
+      },
+      {
+        "name": "additionalGuests",
+        "type": "INTEGER",
+        "mode": "NULLABLE"
+      }
+    ]
+  },
+  {
     "name": "extendedProperties",
     "type": "RECORD",
     "mode": "NULLABLE",
@@ -170,11 +306,6 @@
         ]
       }
     ]
-  },
-  {
-    "name": "eventType",
-    "type": "STRING",
-    "mode": "NULLABLE"
   },
   {
     "name": "hangoutLink",
@@ -270,6 +401,31 @@
             "name": "label",
             "type": "STRING",
             "mode": "NULLABLE"
+          },
+          {
+            "name": "pin",
+            "type": "STRING",
+            "mode": "NULLABLE"
+          },
+          {
+            "name": "accessCode",
+            "type": "STRING",
+            "mode": "NULLABLE"
+          },
+          {
+            "name": "meetingCode",
+            "type": "STRING",
+            "mode": "NULLABLE"
+          },
+          {
+            "name": "passcode",
+            "type": "STRING",
+            "mode": "NULLABLE"
+          },
+          {
+            "name": "password",
+            "type": "STRING",
+            "mode": "NULLABLE"
           }
         ]
       },
@@ -282,8 +438,38 @@
         "name": "signature",
         "type": "STRING",
         "mode": "NULLABLE"
+      },
+      {
+        "name": "notes",
+        "type": "STRING",
+        "mode": "NULLABLE"
       }
     ]
+  },
+  {
+    "name": "guestsCanInviteOthers",
+    "type": "BOOLEAN",
+    "mode": "NULLABLE"
+  },
+  {
+    "name": "guestsCanModify",
+    "type": "BOOLEAN",
+    "mode": "NULLABLE"
+  },
+  {
+    "name": "guestsCanSeeOtherGuests",
+    "type": "BOOLEAN",
+    "mode": "NULLABLE"
+  },
+  {
+    "name": "privateCopy",
+    "type": "BOOLEAN",
+    "mode": "NULLABLE"
+  },
+  {
+    "name": "locked",
+    "type": "BOOLEAN",
+    "mode": "NULLABLE"
   },
   {
     "name": "reminders",
@@ -384,5 +570,10 @@
         "mode": "NULLABLE"
       }
     ]
+  },
+  {
+    "name": "eventType",
+    "type": "STRING",
+    "mode": "NULLABLE"
   }
 ]
