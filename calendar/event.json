@@ -426,6 +426,11 @@
             "name": "password",
             "type": "STRING",
             "mode": "NULLABLE"
+          },
+          {
+            "name": "regionCode",
+            "type": "STRING",
+            "mode": "NULLABLE"
           }
         ]
       },
