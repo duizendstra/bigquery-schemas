@@ -259,49 +259,112 @@
   {
     "name": "extendedProperties",
     "type": "RECORD",
-    "mode": "NULLABLE",
     "fields": [
       {
         "name": "private",
         "type": "RECORD",
-        "mode": "NULLABLE",
         "fields": [
           {
-            "name": "Project",
-            "type": "STRING",
-            "mode": "NULLABLE"
+            "name": "key_01",
+            "type": "STRING"
           },
           {
-            "name": "Task",
-            "type": "STRING",
-            "mode": "NULLABLE"
+            "name": "value_01",
+            "type": "STRING"
           },
           {
-            "name": "Client",
-            "type": "STRING",
-            "mode": "NULLABLE"
+            "name": "key_02",
+            "type": "STRING"
+          },
+          {
+            "name": "value_02",
+            "type": "STRING"
+          },
+          {
+            "name": "key_03",
+            "type": "STRING"
+          },
+          {
+            "name": "value_03",
+            "type": "STRING"
+          },
+          {
+            "name": "key_04",
+            "type": "STRING"
+          },
+          {
+            "name": "value_04",
+            "type": "STRING"
+          },
+          {
+            "name": "key_05",
+            "type": "STRING"
+          },
+          {
+            "name": "value_05",
+            "type": "STRING"
+          },
+          {
+            "name": "key_06",
+            "type": "STRING"
+          },
+          {
+            "name": "value_06",
+            "type": "STRING"
           }
         ]
       },
       {
         "name": "shared",
         "type": "RECORD",
-        "mode": "NULLABLE",
         "fields": [
           {
-            "name": "Project",
-            "type": "STRING",
-            "mode": "NULLABLE"
+            "name": "key_01",
+            "type": "STRING"
           },
           {
-            "name": "Task",
-            "type": "STRING",
-            "mode": "NULLABLE"
+            "name": "value_01",
+            "type": "STRING"
           },
           {
-            "name": "Client",
-            "type": "STRING",
-            "mode": "NULLABLE"
+            "name": "key_02",
+            "type": "STRING"
+          },
+          {
+            "name": "value_02",
+            "type": "STRING"
+          },
+          {
+            "name": "key_03",
+            "type": "STRING"
+          },
+          {
+            "name": "value_03",
+            "type": "STRING"
+          },
+          {
+            "name": "key_04",
+            "type": "STRING"
+          },
+          {
+            "name": "value_04",
+            "type": "STRING"
+          },
+          {
+            "name": "key_05",
+            "type": "STRING"
+          },
+          {
+            "name": "value_05",
+            "type": "STRING"
+          },
+          {
+            "name": "key_06",
+            "type": "STRING"
+          },
+          {
+            "name": "value_06",
+            "type": "STRING"
           }
         ]
       }
