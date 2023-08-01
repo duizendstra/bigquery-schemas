@@ -1,644 +1,573 @@
 [
   {
+    "name": "kind",
+    "type": "STRING",
+    "mode": "NULLABLE"
+  },
+  {
+    "name": "etag",
+    "type": "STRING",
+    "mode": "NULLABLE"
+  },
+  {
+    "name": "id",
+    "type": "STRING",
+    "mode": "NULLABLE"
+  },
+  {
+    "name": "status",
+    "type": "STRING",
+    "mode": "NULLABLE"
+  },
+  {
+    "name": "htmlLink",
+    "type": "STRING",
+    "mode": "NULLABLE"
+  },
+  {
+    "name": "created",
+    "type": "TIMESTAMP",
+    "mode": "NULLABLE"
+  },
+  {
+    "name": "updated",
+    "type": "TIMESTAMP",
+    "mode": "NULLABLE"
+  },
+  {
+    "name": "summary",
+    "type": "STRING",
+    "mode": "NULLABLE"
+  },
+  {
+    "name": "description",
+    "type": "STRING",
+    "mode": "NULLABLE"
+  },
+  {
+    "name": "location",
+    "type": "STRING",
+    "mode": "NULLABLE"
+  },
+  {
+    "name": "colorId",
+    "type": "STRING",
+    "mode": "NULLABLE"
+  },
+  {
+    "name": "creator",
+    "type": "RECORD",
+    "mode": "NULLABLE",
     "fields": [
       {
         "name": "id",
-        "type": "STRING"
+        "type": "STRING",
+        "mode": "NULLABLE"
       },
       {
-        "name": "etag",
-        "type": "STRING"
+        "name": "email",
+        "type": "STRING",
+        "mode": "NULLABLE"
       },
       {
-        "name": "status",
-        "type": "STRING"
+        "name": "displayName",
+        "type": "STRING",
+        "mode": "NULLABLE"
       },
       {
-        "name": "htmlLink",
-        "type": "STRING"
+        "name": "self",
+        "type": "BOOLEAN",
+        "mode": "NULLABLE"
+      }
+    ]
+  },
+  {
+    "name": "organizer",
+    "type": "RECORD",
+    "mode": "NULLABLE",
+    "fields": [
+      {
+        "name": "id",
+        "type": "STRING",
+        "mode": "NULLABLE"
       },
       {
-        "name": "created",
-        "type": "DATETIME"
+        "name": "email",
+        "type": "STRING",
+        "mode": "NULLABLE"
       },
       {
-        "name": "updated",
-        "type": "DATETIME"
+        "name": "displayName",
+        "type": "STRING",
+        "mode": "NULLABLE"
       },
       {
-        "name": "summary",
-        "type": "STRING"
+        "name": "self",
+        "type": "BOOLEAN",
+        "mode": "NULLABLE"
+      }
+    ]
+  },
+  {
+    "name": "start",
+    "type": "RECORD",
+    "mode": "NULLABLE",
+    "fields": [
+      {
+        "name": "dateTime",
+        "type": "TIMESTAMP",
+        "mode": "NULLABLE"
       },
       {
-        "name": "description",
-        "type": "STRING"
+        "name": "date",
+        "type": "DATE",
+        "mode": "NULLABLE"
       },
       {
-        "name": "location",
-        "type": "STRING"
+        "name": "timeZone",
+        "type": "STRING",
+        "mode": "NULLABLE"
+      }
+    ]
+  },
+  {
+    "name": "end",
+    "type": "RECORD",
+    "mode": "NULLABLE",
+    "fields": [
+      {
+        "name": "dateTime",
+        "type": "TIMESTAMP",
+        "mode": "NULLABLE"
       },
       {
-        "name": "colorId",
-        "type": "STRING"
+        "name": "date",
+        "type": "DATE",
+        "mode": "NULLABLE"
       },
       {
-        "name": "creator",
-        "type": "RECORD",
-        "fields": [
-          {
-            "name": "id",
-            "type": "STRING"
-          },
-          {
-            "name": "email",
-            "type": "STRING"
-          },
-          {
-            "name": "displayName",
-            "type": "STRING"
-          },
-          {
-            "name": "self",
-            "type": "BOOLEAN"
-          }
-        ]
+        "name": "timeZone",
+        "type": "STRING",
+        "mode": "NULLABLE"
+      }
+    ]
+  },
+  {
+    "name": "endTimeUnspecified",
+    "type": "BOOLEAN",
+    "mode": "NULLABLE"
+  },
+  {
+    "name": "recurrence",
+    "type": "STRING",
+    "mode": "REPEATED"
+  },
+  {
+    "name": "recurringEventId",
+    "type": "STRING",
+    "mode": "NULLABLE"
+  },
+  {
+    "name": "originalStartTime",
+    "type": "RECORD",
+    "mode": "NULLABLE",
+    "fields": [
+      {
+        "name": "dateTime",
+        "type": "TIMESTAMP",
+        "mode": "NULLABLE"
+      },
+      {
+        "name": "date",
+        "type": "DATE",
+        "mode": "NULLABLE"
+      },
+      {
+        "name": "timeZone",
+        "type": "STRING",
+        "mode": "NULLABLE"
+      }
+    ]
+  },
+  {
+    "name": "transparency",
+    "type": "STRING",
+    "mode": "NULLABLE"
+  },
+  {
+    "name": "visibility",
+    "type": "STRING",
+    "mode": "NULLABLE"
+  },
+  {
+    "name": "iCalUID",
+    "type": "STRING",
+    "mode": "NULLABLE"
+  },
+  {
+    "name": "sequence",
+    "type": "INTEGER",
+    "mode": "NULLABLE"
+  },
+  {
+    "name": "attendees",
+    "type": "RECORD",
+    "mode": "REPEATED",
+    "fields": [
+      {
+        "name": "id",
+        "type": "STRING",
+        "mode": "NULLABLE"
+      },
+      {
+        "name": "email",
+        "type": "STRING",
+        "mode": "NULLABLE"
+      },
+      {
+        "name": "displayName",
+        "type": "STRING",
+        "mode": "NULLABLE"
+      },
+      {
+        "name": "self",
+        "type": "BOOLEAN",
+        "mode": "NULLABLE"
       },
       {
         "name": "organizer",
+        "type": "BOOLEAN",
+        "mode": "NULLABLE"
+      },
+      {
+        "name": "responseStatus",
+        "type": "STRING",
+        "mode": "NULLABLE"
+      },
+      {
+        "name": "comment",
+        "type": "STRING",
+        "mode": "NULLABLE"
+      },
+      {
+        "name": "additionalGuests",
+        "type": "INTEGER",
+        "mode": "NULLABLE"
+      }
+    ]
+  },
+  {
+    "name": "extendedProperties",
+    "type": "RECORD",
+    "mode": "NULLABLE",
+    "fields": [
+      {
+        "name": "private",
         "type": "RECORD",
+        "mode": "NULLABLE",
         "fields": [
           {
-            "name": "id",
-            "type": "STRING"
+            "name": "Project",
+            "type": "STRING",
+            "mode": "NULLABLE"
           },
           {
-            "name": "email",
-            "type": "STRING"
+            "name": "Task",
+            "type": "STRING",
+            "mode": "NULLABLE"
           },
           {
-            "name": "displayName",
-            "type": "STRING"
-          },
-          {
-            "name": "self",
-            "type": "BOOLEAN"
+            "name": "Client",
+            "type": "STRING",
+            "mode": "NULLABLE"
           }
         ]
       },
       {
-        "name": "start",
+        "name": "shared",
         "type": "RECORD",
+        "mode": "NULLABLE",
         "fields": [
           {
-            "name": "date",
-            "type": "DATE"
+            "name": "Project",
+            "type": "STRING",
+            "mode": "NULLABLE"
           },
           {
-            "name": "dateTime",
-            "type": "DATETIME"
+            "name": "Task",
+            "type": "STRING",
+            "mode": "NULLABLE"
           },
           {
-            "name": "timeZone",
-            "type": "STRING"
+            "name": "Client",
+            "type": "STRING",
+            "mode": "NULLABLE"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "hangoutLink",
+    "type": "STRING",
+    "mode": "NULLABLE"
+  },
+  {
+    "name": "conferenceData",
+    "type": "RECORD",
+    "mode": "NULLABLE",
+    "fields": [
+      {
+        "name": "createRequest",
+        "type": "RECORD",
+        "mode": "NULLABLE",
+        "fields": [
+          {
+            "name": "requestId",
+            "type": "STRING",
+            "mode": "NULLABLE"
+          },
+          {
+            "name": "conferenceSolutionKey",
+            "type": "RECORD",
+            "mode": "NULLABLE",
+            "fields": [
+              {
+                "name": "type",
+                "type": "STRING",
+                "mode": "NULLABLE"
+              }
+            ]
+          },
+          {
+            "name": "status",
+            "type": "RECORD",
+            "mode": "NULLABLE",
+            "fields": [
+              {
+                "name": "statusCode",
+                "type": "STRING",
+                "mode": "NULLABLE"
+              }
+            ]
           }
         ]
       },
       {
-        "name": "end",
+        "name": "conferenceSolution",
         "type": "RECORD",
+        "mode": "NULLABLE",
         "fields": [
           {
-            "name": "date",
-            "type": "DATE"
+            "name": "key",
+            "type": "RECORD",
+            "mode": "NULLABLE",
+            "fields": [
+              {
+                "name": "type",
+                "type": "STRING",
+                "mode": "NULLABLE"
+              }
+            ]
           },
           {
-            "name": "dateTime",
-            "type": "DATETIME"
+            "name": "name",
+            "type": "STRING",
+            "mode": "NULLABLE"
           },
           {
-            "name": "timeZone",
-            "type": "STRING"
+            "name": "iconUri",
+            "type": "STRING",
+            "mode": "NULLABLE"
           }
         ]
       },
       {
-        "name": "endTimeUnspecified",
-        "type": "BOOLEAN"
-      },
-      {
-        "name": "recurrence",
-        "type": "STRING"
-      },
-      {
-        "name": "recurringEventId",
-        "type": "STRING"
-      },
-      {
-        "name": "originalStartTime",
-        "type": "RECORD",
-        "fields": [
-          {
-            "name": "date",
-            "type": "DATE"
-          },
-          {
-            "name": "dateTime",
-            "type": "DATETIME"
-          },
-          {
-            "name": "timeZone",
-            "type": "STRING"
-          }
-        ]
-      },
-      {
-        "name": "transparency",
-        "type": "STRING"
-      },
-      {
-        "name": "visibility",
-        "type": "STRING"
-      },
-      {
-        "name": "iCalUID",
-        "type": "STRING"
-      },
-      {
-        "name": "sequence",
-        "type": "INTEGER"
-      },
-      {
-        "name": "attendees",
+        "name": "entryPoints",
         "type": "RECORD",
         "mode": "REPEATED",
         "fields": [
           {
-            "name": "id",
-            "type": "STRING"
+            "name": "entryPointType",
+            "type": "STRING",
+            "mode": "NULLABLE"
           },
           {
-            "name": "email",
-            "type": "STRING"
+            "name": "uri",
+            "type": "STRING",
+            "mode": "NULLABLE"
           },
           {
-            "name": "displayName",
-            "type": "STRING"
+            "name": "label",
+            "type": "STRING",
+            "mode": "NULLABLE"
           },
           {
-            "name": "organizer",
-            "type": "BOOLEAN"
+            "name": "pin",
+            "type": "STRING",
+            "mode": "NULLABLE"
           },
           {
-            "name": "self",
-            "type": "BOOLEAN"
+            "name": "accessCode",
+            "type": "STRING",
+            "mode": "NULLABLE"
           },
           {
-            "name": "resource",
-            "type": "BOOLEAN"
+            "name": "meetingCode",
+            "type": "STRING",
+            "mode": "NULLABLE"
           },
           {
-            "name": "optional",
-            "type": "BOOLEAN"
+            "name": "passcode",
+            "type": "STRING",
+            "mode": "NULLABLE"
           },
           {
-            "name": "responseStatus",
-            "type": "STRING"
-          },
-          {
-            "name": "comment",
-            "type": "STRING"
-          },
-          {
-            "name": "additionalGuests",
-            "type": "INTEGER"
+            "name": "password",
+            "type": "STRING",
+            "mode": "NULLABLE"
           }
         ]
       },
       {
-        "name": "attendeesOmitted",
-        "type": "BOOLEAN"
+        "name": "conferenceId",
+        "type": "STRING",
+        "mode": "NULLABLE"
       },
       {
-        "name": "extendedProperties",
-        "type": "RECORD",
-        "fields": [
-          {
-            "name": "private",
-            "type": "RECORD",
-            "fields": [
-              {
-                "name": "key_01",
-                "type": "STRING"
-              },
-              {
-                "name": "value_01",
-                "type": "STRING"
-              },
-              {
-                "name": "key_02",
-                "type": "STRING"
-              },
-              {
-                "name": "value_02",
-                "type": "STRING"
-              },
-              {
-                "name": "key_03",
-                "type": "STRING"
-              },
-              {
-                "name": "value_03",
-                "type": "STRING"
-              },
-              {
-                "name": "key_04",
-                "type": "STRING"
-              },
-              {
-                "name": "value_04",
-                "type": "STRING"
-              },
-              {
-                "name": "key_05",
-                "type": "STRING"
-              },
-              {
-                "name": "value_05",
-                "type": "STRING"
-              },
-              {
-                "name": "key_06",
-                "type": "STRING"
-              },
-              {
-                "name": "value_06",
-                "type": "STRING"
-              }
-            ]
-          },
-          {
-            "name": "shared",
-            "type": "RECORD",
-            "fields": [
-              {
-                "name": "key_01",
-                "type": "STRING"
-              },
-              {
-                "name": "value_01",
-                "type": "STRING"
-              },
-              {
-                "name": "key_02",
-                "type": "STRING"
-              },
-              {
-                "name": "value_02",
-                "type": "STRING"
-              },
-              {
-                "name": "key_03",
-                "type": "STRING"
-              },
-              {
-                "name": "value_03",
-                "type": "STRING"
-              },
-              {
-                "name": "key_04",
-                "type": "STRING"
-              },
-              {
-                "name": "value_04",
-                "type": "STRING"
-              },
-              {
-                "name": "key_05",
-                "type": "STRING"
-              },
-              {
-                "name": "value_05",
-                "type": "STRING"
-              },
-              {
-                "name": "key_06",
-                "type": "STRING"
-              },
-              {
-                "name": "value_06",
-                "type": "STRING"
-              }
-            ]
-          }
-        ]
+        "name": "signature",
+        "type": "STRING",
+        "mode": "NULLABLE"
       },
       {
-        "name": "hangoutLink",
-        "type": "STRING"
+        "name": "notes",
+        "type": "STRING",
+        "mode": "NULLABLE"
+      }
+    ]
+  },
+  {
+    "name": "guestsCanInviteOthers",
+    "type": "BOOLEAN",
+    "mode": "NULLABLE"
+  },
+  {
+    "name": "guestsCanModify",
+    "type": "BOOLEAN",
+    "mode": "NULLABLE"
+  },
+  {
+    "name": "guestsCanSeeOtherGuests",
+    "type": "BOOLEAN",
+    "mode": "NULLABLE"
+  },
+  {
+    "name": "privateCopy",
+    "type": "BOOLEAN",
+    "mode": "NULLABLE"
+  },
+  {
+    "name": "locked",
+    "type": "BOOLEAN",
+    "mode": "NULLABLE"
+  },
+  {
+    "name": "reminders",
+    "type": "RECORD",
+    "mode": "NULLABLE",
+    "fields": [
+      {
+        "name": "useDefault",
+        "type": "BOOLEAN",
+        "mode": "NULLABLE"
       },
       {
-        "name": "conferenceData",
-        "type": "RECORD",
-        "fields": [
-          {
-            "name": "createRequest",
-            "type": "RECORD",
-            "fields": [
-              {
-                "name": "requestId",
-                "type": "STRING"
-              },
-              {
-                "name": "conferenceSolutionKey",
-                "type": "RECORD",
-                "fields": [
-                  {
-                    "name": "type",
-                    "type": "STRING"
-                  }
-                ]
-              },
-              {
-                "name": "status",
-                "type": "RECORD",
-                "fields": [
-                  {
-                    "name": "statusCode",
-                    "type": "STRING"
-                  }
-                ]
-              }
-            ]
-          },
-          {
-            "name": "entryPoints",
-            "type": "RECORD",
-            "mode": "REPEATED",
-            "fields": [
-              {
-                "name": "entryPointType",
-                "type": "STRING"
-              },
-              {
-                "name": "uri",
-                "type": "STRING"
-              },
-              {
-                "name": "label",
-                "type": "STRING"
-              },
-              {
-                "name": "pin",
-                "type": "STRING"
-              },
-              {
-                "name": "accessCode",
-                "type": "STRING"
-              },
-              {
-                "name": "meetingCode",
-                "type": "STRING"
-              },
-              {
-                "name": "passcode",
-                "type": "STRING"
-              },
-              {
-                "name": "password",
-                "type": "STRING"
-              }
-            ]
-          },
-          {
-            "name": "conferenceSolution",
-            "type": "RECORD",
-            "fields": [
-              {
-                "name": "key",
-                "type": "RECORD",
-                "fields": [
-                  {
-                    "name": "type",
-                    "type": "STRING"
-                  }
-                ]
-              },
-              {
-                "name": "name",
-                "type": "STRING"
-              },
-              {
-                "name": "iconUri",
-                "type": "STRING"
-              }
-            ]
-          },
-          {
-            "name": "conferenceId",
-            "type": "STRING"
-          },
-          {
-            "name": "signature",
-            "type": "STRING"
-          },
-          {
-            "name": "notes",
-            "type": "STRING"
-          }
-        ]
-      },
-      {
-        "name": "gadget",
-        "type": "RECORD",
-        "fields": [
-          {
-            "name": "type",
-            "type": "STRING"
-          },
-          {
-            "name": "title",
-            "type": "STRING"
-          },
-          {
-            "name": "link",
-            "type": "STRING"
-          },
-          {
-            "name": "iconLink",
-            "type": "STRING"
-          },
-          {
-            "name": "width",
-            "type": "INTEGER"
-          },
-          {
-            "name": "height",
-            "type": "INTEGER"
-          },
-          {
-            "name": "display",
-            "type": "STRING"
-          },
-          {
-            "name": "preferences",
-            "type": "RECORD",
-            "mode": "REPEATED",
-            "fields": [
-              {
-                "name": "key",
-                "type": "STRING"
-              },
-              {
-                "name": "value",
-                "type": "STRING"
-              }
-            ]
-          }
-        ]
-      },
-      {
-        "name": "anyoneCanAddSelf",
-        "type": "BOOLEAN"
-      },
-      {
-        "name": "guestsCanInviteOthers",
-        "type": "BOOLEAN"
-      },
-      {
-        "name": "guestsCanModify",
-        "type": "BOOLEAN"
-      },
-      {
-        "name": "guestsCanSeeOtherGuests",
-        "type": "BOOLEAN"
-      },
-      {
-        "name": "privateCopy",
-        "type": "BOOLEAN"
-      },
-      {
-        "name": "locked",
-        "type": "BOOLEAN"
-      },
-      {
-        "name": "reminders",
-        "type": "RECORD",
-        "fields": [
-          {
-            "name": "useDefault",
-            "type": "BOOLEAN"
-          },
-          {
-            "name": "overrides",
-            "type": "RECORD",
-            "mode": "REPEATED",
-            "fields": [
-              {
-                "name": "method",
-                "type": "STRING"
-              },
-              {
-                "name": "minutes",
-                "type": "INTEGER"
-              }
-            ]
-          }
-        ]
-      },
-      {
-        "name": "source",
-        "type": "RECORD",
-        "fields": [
-          {
-            "name": "url",
-            "type": "STRING"
-          },
-          {
-            "name": "title",
-            "type": "STRING"
-          }
-        ]
-      },
-      {
-        "name": "workingLocationProperties",
-        "type": "RECORD",
-        "fields": [
-          {
-            "name": "type",
-            "type": "STRING"
-          },
-          {
-            "name": "homeOffice",
-            "type": "STRING"
-          },
-          {
-            "name": "customLocation",
-            "type": "RECORD",
-            "fields": [
-              {
-                "name": "label",
-                "type": "STRING"
-              }
-            ]
-          },
-          {
-            "name": "officeLocation",
-            "type": "RECORD",
-            "fields": [
-              {
-                "name": "buildingId",
-                "type": "STRING"
-              },
-              {
-                "name": "floorId",
-                "type": "STRING"
-              },
-              {
-                "name": "floorSectionId",
-                "type": "STRING"
-              },
-              {
-                "name": "deskId",
-                "type": "STRING"
-              },
-              {
-                "name": "label",
-                "type": "STRING"
-              }
-            ]
-          }
-        ]
-      },
-      {
-        "name": "attachments",
+        "name": "overrides",
         "type": "RECORD",
         "mode": "REPEATED",
         "fields": [
           {
-            "name": "fileUrl",
-            "type": "STRING"
+            "name": "method",
+            "type": "STRING",
+            "mode": "NULLABLE"
           },
           {
-            "name": "title",
-            "type": "STRING"
-          },
-          {
-            "name": "mimeType",
-            "type": "STRING"
-          },
-          {
-            "name": "iconLink",
-            "type": "STRING"
-          },
-          {
-            "name": "fileId",
-            "type": "STRING"
+            "name": "minutes",
+            "type": "INTEGER",
+            "mode": "NULLABLE"
           }
         ]
+      }
+    ]
+  },
+  {
+    "name": "source",
+    "type": "RECORD",
+    "mode": "NULLABLE",
+    "fields": [
+      {
+        "name": "url",
+        "type": "STRING",
+        "mode": "NULLABLE"
       },
       {
-        "name": "eventType",
-        "type": "STRING"
+        "name": "title",
+        "type": "STRING",
+        "mode": "NULLABLE"
+      }
+    ]
+  },
+  {
+    "name": "attachments",
+    "type": "RECORD",
+    "mode": "REPEATED",
+    "fields": [
+      {
+        "name": "fileUrl",
+        "type": "STRING",
+        "mode": "NULLABLE"
+      },
+      {
+        "name": "title",
+        "type": "STRING",
+        "mode": "NULLABLE"
+      },
+      {
+        "name": "mimeType",
+        "type": "STRING",
+        "mode": "NULLABLE"
+      },
+      {
+        "name": "iconLink",
+        "type": "STRING",
+        "mode": "NULLABLE"
+      },
+      {
+        "name": "fileId",
+        "type": "STRING",
+        "mode": "NULLABLE"
+      }
+    ]
+  },
+  {
+    "name": "anyoneCanAddSelf",
+    "type": "BOOLEAN",
+    "mode": "NULLABLE"
+  },
+  {
+    "name": "defaultReminders",
+    "type": "RECORD",
+    "mode": "REPEATED",
+    "fields": [
+      {
+        "name": "method",
+        "type": "STRING",
+        "mode": "NULLABLE"
+      },
+      {
+        "name": "minutes",
+        "type": "INTEGER",
+        "mode": "NULLABLE"
       }
     ]
   }
