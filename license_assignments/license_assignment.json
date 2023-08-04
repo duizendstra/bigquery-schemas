@@ -12,7 +12,7 @@
         "description": "Identifies the type of the API resource. For LicenseAssignment resources, the value is admin#licensing#licenseAssignment."
     },
     {
-        "name": "etag",
+        "name": "etags",
         "type": "STRING",
         "mode": "NULLABLE",
         "description": "The ETag of the resource."
