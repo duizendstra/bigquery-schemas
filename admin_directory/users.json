@@ -1,4 +1,4 @@
-[   
+[
     {
         "name": "load_timestamp",
         "type": "TIMESTAMP",
@@ -6,10 +6,22 @@
         "description": "The timestamp when the record was loaded."
     },
     {
+        "name": "kind",
+        "type": "STRING",
+        "mode": "NULLABLE",
+        "description": "The type of the API resource. For User resources, this is admin#directory#user."
+    },
+    {
         "name": "id",
         "type": "STRING",
         "mode": "NULLABLE",
         "description": "The unique ID for the user."
+    },
+    {
+        "name": "etag",
+        "type": "STRING",
+        "mode": "NULLABLE",
+        "description": "The ETag of the resource."
     },
     {
         "name": "primaryEmail",
@@ -66,6 +78,30 @@
         "description": "Indicates if the user is a delegated administrator."
     },
     {
+        "name": "isMailboxSetup",
+        "type": "BOOLEAN",
+        "mode": "NULLABLE",
+        "description": "Indicates if the user's Google Workspace mailbox is setup."
+    },
+    {
+        "name": "changePasswordAtNextLogin",
+        "type": "BOOLEAN",
+        "mode": "NULLABLE",
+        "description": "Indicates if the user is forced to change their password at their next login."
+    },
+    {
+        "name": "isEnrolledIn2Sv",
+        "type": "BOOLEAN",
+        "mode": "NULLABLE",
+        "description": "Indicates if the user is enrolled in 2-Step Verification."
+    },
+    {
+        "name": "isEnforcedIn2Sv",
+        "type": "BOOLEAN",
+        "mode": "NULLABLE",
+        "description": "Indicates if 2-Step Verification is enforced for the user."
+    },
+    {
         "name": "thumbnailPhotoUrl",
         "type": "STRING",
         "mode": "NULLABLE",
@@ -112,6 +148,20 @@
                 "type": "STRING",
                 "mode": "NULLABLE",
                 "description": "The user's first name."
+            }
+        ]
+    },
+    {
+        "name": "Aliases",
+        "type": "RECORD",
+        "mode": "REPEATED",
+        "description": "A list of the user's aliases.",
+        "fields": [
+            {
+                "name": "alias",
+                "type": "STRING",
+                "mode": "NULLABLE",
+                "description": "The user's alias."
             }
         ]
     },
