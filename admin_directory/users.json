@@ -1,4 +1,10 @@
-[
+[   
+    {
+        "name": "id",
+        "type": "load_timestamp",
+        "mode": "NULLABLE",
+        "description": "The timestamp when the record was loaded."
+    },
     {
         "name": "id",
         "type": "STRING",
