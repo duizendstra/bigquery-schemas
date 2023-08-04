@@ -152,18 +152,10 @@
         ]
     },
     {
-        "name": "Aliases",
-        "type": "RECORD",
+        "name": "aliases",
+        "type": "STRING",
         "mode": "REPEATED",
-        "description": "A list of the user's aliases.",
-        "fields": [
-            {
-                "name": "alias",
-                "type": "STRING",
-                "mode": "NULLABLE",
-                "description": "The user's alias."
-            }
-        ]
+        "description": "A list of the user's aliases."
     },
     {
         "name": "Emails",
