@@ -1,7 +1,7 @@
 [   
     {
-        "name": "id",
-        "type": "load_timestamp",
+        "name": "load_timestamp",
+        "type": "TIMESTAMP",
         "mode": "NULLABLE",
         "description": "The timestamp when the record was loaded."
     },
