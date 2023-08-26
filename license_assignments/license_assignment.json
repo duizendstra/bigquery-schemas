@@ -1,15 +1,9 @@
 [
     {
-        "name": "load_timestamp",
+        "name": "api_read_timestamp",
         "type": "TIMESTAMP",
         "mode": "NULLABLE",
         "description": "The timestamp when the record was loaded."
-    },
-    {
-        "name": "kind",
-        "type": "STRING",
-        "mode": "NULLABLE",
-        "description": "Identifies the type of the API resource. For LicenseAssignment resources, the value is admin#licensing#licenseAssignment."
     },
     {
         "name": "etags",
@@ -18,16 +12,28 @@
         "description": "The ETag of the resource."
     },
     {
-        "name": "userId",
+        "name": "kind",
         "type": "STRING",
         "mode": "NULLABLE",
-        "description": "The unique ID of the user the license is assigned to."
+        "description": "Identifies the type of the API resource. For LicenseAssignment resources, the value is admin#licensing#licenseAssignment."
     },
     {
         "name": "productId",
         "type": "STRING",
         "mode": "NULLABLE",
         "description": "The product ID of the product the license is for."
+    },
+    {
+        "name": "productName",
+        "type": "STRING",
+        "mode": "NULLABLE",
+        "description": "The name of the product."
+    },
+    {
+        "name": "selfLink",
+        "type": "STRING",
+        "mode": "NULLABLE",
+        "description": "The self-link of the resource."
     },
     {
         "name": "skuId",
@@ -42,9 +48,9 @@
         "description": "The name of the SKU of the product."
     },
     {
-        "name": "productName",
+        "name": "userId",
         "type": "STRING",
         "mode": "NULLABLE",
-        "description": "The name of the product."
+        "description": "The unique ID of the user the license is assigned to."
     }
 ]
