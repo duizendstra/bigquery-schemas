@@ -1,0 +1,62 @@
+[
+    {
+        "name": "load_timestamp",
+        "type": "TIMESTAMP",
+        "mode": "NULLABLE",
+        "description": "The timestamp when the record was loaded."
+    },
+    {
+        "name": "name",
+        "type": "STRING",
+        "mode": "NULLABLE",
+        "description": "The name (ID) of the asset."
+    },
+    {
+        "name": "title",
+        "type": "STRING",
+        "mode": "NULLABLE",
+        "description": "The title of the asset."
+    },
+    {
+        "name": "assetType",
+        "type": "STRING",
+        "mode": "NULLABLE",
+        "description": "The type of asset."
+    },
+    {
+        "name": "trashed",
+        "type": "BOOLEAN",
+        "mode": "NULLABLE",
+        "description": "Indicates if the asset is in the trash."
+    },
+    {
+        "name": "updateTime",
+        "type": "TIMESTAMP",
+        "mode": "NULLABLE",
+        "description": "Date the asset was last updated."
+    },
+    {
+        "name": "updateByMeTime",
+        "type": "TIMESTAMP",
+        "mode": "NULLABLE",
+        "description": "Date the asset was last modified by me."
+    },
+    {
+        "name": "createTime",
+        "type": "TIMESTAMP",
+        "mode": "NULLABLE",
+        "description": "The timestamp when the record was loaded."
+    },
+    {
+        "name": "lastViewByMeTime",
+        "type": "TIMESTAMP",
+        "mode": "NULLABLE",
+        "description": "Date the asset was last viewed by me"
+    },
+    {
+        "name": "owner",
+        "type": "STRING",
+        "mode": "NULLABLE",
+        "description": "The owner of the asset."
+    }
+]
