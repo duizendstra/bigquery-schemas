@@ -1,0 +1,40 @@
+[
+  {
+    "name": "load_timestamp",
+    "type": "TIMESTAMP",
+    "mode": "NULLABLE",
+    "description": "The timestamp when the record was loaded."
+  },
+  {
+    "name": "role",
+    "type": "STRING",
+    "mode": "NULLABLE",
+    "description": "The role of the permission."
+  },
+  {
+    "name": "permissions",
+    "type": "RECORD",
+    "mode": "REPEATED",
+    "fields": [
+      {
+        "name": "type",
+        "type": "STRING",
+        "mode": "NULLABLE",
+        "description": "The type of the permission (e.g., OWNER, EDITOR)."
+      },
+      {
+        "name": "members",
+        "type": "STRING",
+        "mode": "REPEATED",
+        "description": "The members associated with the permission."
+      }
+    ],
+    "description": "Nested field for permissions."
+  },
+  {
+    "name": "etag",
+    "type": "STRING",
+    "mode": "NULLABLE",
+    "description": "The etag of the permissions record."
+  }
+]
