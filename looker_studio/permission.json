@@ -6,6 +6,12 @@
     "description": "The timestamp when the record was loaded."
   },
   {
+    "name": "scanned_by",
+    "type": "TIMESTAMP",
+    "mode": "NULLABLE",
+    "description": "The timestamp when the record was loaded."
+  },
+  {
     "name": "name",
     "type": "STRING",
     "mode": "NULLABLE",
