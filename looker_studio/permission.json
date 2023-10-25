@@ -6,6 +6,12 @@
     "description": "The timestamp when the record was loaded."
   },
   {
+    "name": "name",
+    "type": "STRING",
+    "mode": "NULLABLE",
+    "description": "The name (ID) of the asset."
+  },
+  {
     "name": "role",
     "type": "STRING",
     "mode": "NULLABLE",
