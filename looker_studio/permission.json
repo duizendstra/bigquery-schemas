@@ -3,13 +3,13 @@
     "name": "scan_timestamp",
     "type": "TIMESTAMP",
     "mode": "NULLABLE",
-    "description": "The timestamp when the record was loaded."
+    "description": "The timestamp when the permission was fetched."
   },
   {
     "name": "scan_subject",
-    "type": "TIMESTAMP",
+    "type": "STRING",
     "mode": "NULLABLE",
-    "description": "The timestamp when the record was loaded."
+    "description": "The identity that fetched the permission."
   },
   {
     "name": "name",
