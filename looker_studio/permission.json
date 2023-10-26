@@ -18,35 +18,73 @@
     "description": "The name (ID) of the asset."
   },
   {
-    "name": "role",
-    "type": "STRING",
+    "name": "owner",
+    "type": "STRUCT",
     "mode": "NULLABLE",
-    "description": "The role of the permission."
-  },
-  {
-    "name": "permissions",
-    "type": "RECORD",
-    "mode": "REPEATED",
+    "description": "OWNER	Describes members that are owners.",
     "fields": [
-      {
-        "name": "type",
-        "type": "STRING",
-        "mode": "NULLABLE",
-        "description": "The type of the permission (e.g., OWNER, EDITOR)."
-      },
       {
         "name": "members",
         "type": "STRING",
         "mode": "REPEATED",
-        "description": "The members associated with the permission."
+        "description": "List of members who own the asset."
       }
-    ],
-    "description": "Nested field for permissions."
+    ]
   },
   {
-    "name": "etag",
-    "type": "STRING",
+    "name": "editor",
+    "type": "STRUCT",
     "mode": "NULLABLE",
-    "description": "The etag of the permissions record."
+    "description": "Describes members that have been granted edit permissions.",
+    "fields": [
+      {
+        "name": "members",
+        "type": "STRING",
+        "mode": "REPEATED",
+        "description": "List of members who can edit the asset."
+      }
+    ]
+  },
+  {
+    "name": "viewer",
+    "type": "STRUCT",
+    "mode": "NULLABLE",
+    "description": "Describes members that have been granted view permissions.",
+    "fields": [
+      {
+        "name": "members",
+        "type": "STRING",
+        "mode": "REPEATED",
+        "description": "List of members who can view the asset."
+      }
+    ]
+  },
+  {
+    "name": "link_editor",
+    "type": "STRUCT",
+    "mode": "NULLABLE",
+    "description": "Describes members that have edit permissions.",
+    "fields": [
+      {
+        "name": "members",
+        "type": "STRING",
+        "mode": "REPEATED",
+        "description": "List of members who can edit the asset."
+      }
+    ]
+  },
+  {
+    "name": "link_viewer",
+    "type": "STRUCT",
+    "mode": "NULLABLE",
+    "description": "Describes members that have view permissions",
+    "fields": [
+      {
+        "name": "members",
+        "type": "STRING",
+        "mode": "REPEATED",
+        "description": "List of members who can view the asset."
+      }
+    ]
   }
 ]
