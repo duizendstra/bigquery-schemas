@@ -21,7 +21,7 @@
     "name": "owner",
     "type": "STRUCT",
     "mode": "NULLABLE",
-    "description": "OWNER	Describes members that are owners.",
+    "description": "OWNER Describes members that are owners.",
     "fields": [
       {
         "name": "members",
