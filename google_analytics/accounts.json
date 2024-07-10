@@ -12,37 +12,37 @@
         "description": "The identity that fetched the asset."
     },
     {
-        "name": "account_id",
+        "name": "name",
         "type": "STRING",
         "mode": "NULLABLE",
         "description": "The account ID in the format 'accounts/{account_id}'."
     },
     {
-        "name": "create_time",
+        "name": "createTime",
         "type": "TIMESTAMP",
         "mode": "NULLABLE",
         "description": "The creation time of the account."
     },
     {
-        "name": "update_time",
+        "name": "updateTime",
         "type": "TIMESTAMP",
         "mode": "NULLABLE",
         "description": "The last update time of the account."
     },
     {
-        "name": "display_name",
+        "name": "displayName",
         "type": "STRING",
         "mode": "NULLABLE",
         "description": "The display name of the account."
     },
     {
-        "name": "region_code",
+        "name": "regionCode",
         "type": "STRING",
         "mode": "NULLABLE",
         "description": "The region code of the account."
     },
     {
-        "name": "gmp_organization",
+        "name": "gmpOrganization",
         "type": "STRING",
         "mode": "NULLABLE",
         "description": "The GMP organization associated with the account."
