@@ -1,0 +1,32 @@
+[
+    {
+        "name": "scan_timestamp",
+        "type": "TIMESTAMP",
+        "mode": "NULLABLE",
+        "description": "The timestamp when the asset was fetched."
+    },
+    {
+        "name": "scan_subject",
+        "type": "STRING",
+        "mode": "NULLABLE",
+        "description": "The identity that fetched the asset."
+    },
+    {
+        "name": "name",
+        "type": "STRING",
+        "mode": "NULLABLE",
+        "description": "The access ID in the format 'accounts/{account_id}/accessBindings/{access_id}'."
+    },
+    {
+        "name": "user",
+        "type": "STRING",
+        "mode": "NULLABLE",
+        "description": "The name of the user."
+    },
+    {
+        "name": "roles",
+        "type": "STRING",
+        "mode": "REPEATED",
+        "description": "The roles assigned to the user."
+    }
+]

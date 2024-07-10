@@ -1,0 +1,74 @@
+[
+    {
+        "name": "scan_timestamp",
+        "type": "TIMESTAMP",
+        "mode": "NULLABLE",
+        "description": "The timestamp when the asset was fetched."
+    },
+    {
+        "name": "scan_subject",
+        "type": "STRING",
+        "mode": "NULLABLE",
+        "description": "The identity that fetched the asset."
+    },
+    {
+        "name": "name",
+        "type": "STRING",
+        "mode": "NULLABLE",
+        "description": "The property ID in the format 'properties/{property_id}'."
+    },
+    {
+        "name": "parent",
+        "type": "STRING",
+        "mode": "NULLABLE",
+        "description": "The parent account in the format 'accounts/{account_id}'."
+    },
+    {
+        "name": "createTime",
+        "type": "TIMESTAMP",
+        "mode": "NULLABLE",
+        "description": "The creation time of the property."
+    },
+    {
+        "name": "updateTime",
+        "type": "TIMESTAMP",
+        "mode": "NULLABLE",
+        "description": "The last update time of the property."
+    },
+    {
+        "name": "displayName",
+        "type": "STRING",
+        "mode": "NULLABLE",
+        "description": "The display name of the property."
+    },
+    {
+        "name": "timeZone",
+        "type": "STRING",
+        "mode": "NULLABLE",
+        "description": "The time zone of the property."
+    },
+    {
+        "name": "currencyCode",
+        "type": "STRING",
+        "mode": "NULLABLE",
+        "description": "The currency code of the property."
+    },
+    {
+        "name": "serviceLevel",
+        "type": "STRING",
+        "mode": "NULLABLE",
+        "description": "The service level of the property."
+    },
+    {
+        "name": "account",
+        "type": "STRING",
+        "mode": "NULLABLE",
+        "description": "The account associated with the property."
+    },
+    {
+        "name": "propertyType",
+        "type": "STRING",
+        "mode": "NULLABLE",
+        "description": "The type of the property."
+    }
+]
