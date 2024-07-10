@@ -1,0 +1,50 @@
+[
+    {
+        "name": "scan_timestamp",
+        "type": "TIMESTAMP",
+        "mode": "NULLABLE",
+        "description": "The timestamp when the asset was fetched."
+    },
+    {
+        "name": "scan_subject",
+        "type": "STRING",
+        "mode": "NULLABLE",
+        "description": "The identity that fetched the asset."
+    },
+    {
+        "name": "account_id",
+        "type": "STRING",
+        "mode": "NULLABLE",
+        "description": "The account ID in the format 'accounts/{account_id}'."
+    },
+    {
+        "name": "create_time",
+        "type": "TIMESTAMP",
+        "mode": "NULLABLE",
+        "description": "The creation time of the account."
+    },
+    {
+        "name": "update_time",
+        "type": "TIMESTAMP",
+        "mode": "NULLABLE",
+        "description": "The last update time of the account."
+    },
+    {
+        "name": "display_name",
+        "type": "STRING",
+        "mode": "NULLABLE",
+        "description": "The display name of the account."
+    },
+    {
+        "name": "region_code",
+        "type": "STRING",
+        "mode": "NULLABLE",
+        "description": "The region code of the account."
+    },
+    {
+        "name": "gmp_organization",
+        "type": "STRING",
+        "mode": "NULLABLE",
+        "description": "The GMP organization associated with the account."
+    }
+]
