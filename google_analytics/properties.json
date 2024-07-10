@@ -18,10 +18,10 @@
         "description": "The property ID in the format 'properties/{property_id}'."
     },
     {
-        "name": "parent",
+        "name": "propertyType",
         "type": "STRING",
         "mode": "NULLABLE",
-        "description": "The parent account in the format 'accounts/{account_id}'."
+        "description": "The type of the property."
     },
     {
         "name": "createTime",
@@ -36,10 +36,22 @@
         "description": "The last update time of the property."
     },
     {
+        "name": "parent",
+        "type": "STRING",
+        "mode": "NULLABLE",
+        "description": "The parent account in the format 'accounts/{account_id}'."
+    },
+    {
         "name": "displayName",
         "type": "STRING",
         "mode": "NULLABLE",
         "description": "The display name of the property."
+    },
+    {
+        "name": "industryCategory",
+        "type": "STRING",
+        "mode": "NULLABLE",
+        "description": "The industry category of the property."
     },
     {
         "name": "timeZone",
@@ -60,15 +72,21 @@
         "description": "The service level of the property."
     },
     {
+        "name": "deleteTime",
+        "type": "TIMESTAMP",
+        "mode": "NULLABLE",
+        "description": "The deletion time of the property."
+    },
+    {
+        "name": "expireTime",
+        "type": "TIMESTAMP",
+        "mode": "NULLABLE",
+        "description": "The expiration time of the property."
+    },
+    {
         "name": "account",
         "type": "STRING",
         "mode": "NULLABLE",
         "description": "The account associated with the property."
-    },
-    {
-        "name": "propertyType",
-        "type": "STRING",
-        "mode": "NULLABLE",
-        "description": "The type of the property."
     }
 ]
